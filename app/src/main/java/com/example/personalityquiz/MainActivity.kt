@@ -19,18 +19,23 @@ class MainActivity : AppCompatActivity() {
         "q4",
         "q5",
         "q6",
-        "q7",
-        "q8"
+        "q7"
         )
+
+    lateinit var leftButton: Button
+    lateinit var titleText: TextView
+    lateinit var questionText: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val rightButton: Button = findViewById<Button>(R.id.rightButton)
         rightButton.setOnClickListener { rightButtonClicked() }
-        val leftButton: Button = findViewById<Button>(R.id.leftButton)
-        val titleText: TextView = findViewById<TextView>(R.id.titleText)
-        val questionText: TextView = findViewById<TextView>(R.id.questionText)
+
+        leftButton = findViewById<Button>(R.id.leftButton)
+        questionText = findViewById(R.id.questionText)
+        titleText = findViewById<TextView>(R.id.titleText)
+
     }
 
     private fun rightButtonClicked(){
@@ -51,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun leftButtonClicked(){
-        if(rightButton.text == "Quit"){
+        if(leftButton.text == "Quit"){
             finishAffinity()
             exitProcess(0)
         }
@@ -69,10 +74,11 @@ class MainActivity : AppCompatActivity() {
             leftButton.text = getString(R.string.no)
             gameStart = true
         }
-        if (questionNum == 7){
+        else if (questionNum == 7){
             println("I was here")
             gameStart = false
             showResults()
+            return
         }
 
         val qNumber = questionNum + 1
@@ -85,28 +91,28 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showResults(){
-        println("YO")
-        val personality: String =when(points) {
-            -7 -> "Scum"
-            -6 -> "Evil"
-            -5 -> "Small-minded"
-            -4 -> "Greedy"
-            -3 -> "Need Help"
-            -2 -> "Idiot"
-            -1 -> "Slightly degenerate"
-            0 -> "Acceptable"
-            1 -> "Unremarkable"
-            2 -> "A Weeb"
-            3 -> "Slightly useful to society"
-            4 -> "Has a chance to succeed in life"
-            5 -> "Wait I just realized this is supposed to be personalities"
-            6 -> "Either you are faking it or you are a samaritan"
-            7 -> "Stop lying you showoff, go home"
-            else-> "You have been deemed unjudgeable by the Sibyl System"
+        val personality: String = when(points) {
+            -7 -> {"Scum"}
+            -6 -> {"Evil"}
+            -5 -> {"Small-minded"}
+            -4 -> {"Greedy"}
+            -3 -> {"Need Help"}
+            -2 -> {"Idiot"}
+            -1 -> {"Slightly degenerate"}
+            0 -> {"Acceptable"}
+            1 -> {"Unremarkable"}
+            2 -> {"A Weeb"}
+            3 -> {"Slightly useful to society"}
+            4 -> {"Has a chance to succeed in life"}
+            5 -> {"Wait I just realized this is supposed to be personalities"}
+            6 -> {"Either you are faking it or you are a samaritan"}
+            7 -> {"Stop lying you showoff, go home"}
+            else-> {"You have been deemed unjudgeable by the Sibyl System"}
         }
+        // In actual workshop can use if statements for simplicity
 
-        this.titleText.text = getString(R.string.resultsTitle)
-        this.questionText.text = personality
+        titleText.text = getString(R.string.resultsTitle)
+        questionText.text = personality
 
         leftButton.text = getString(R.string.quit)
         rightButton.text = getString(R.string.playAgain)
