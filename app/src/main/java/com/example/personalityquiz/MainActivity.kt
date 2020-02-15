@@ -13,13 +13,13 @@ class MainActivity : AppCompatActivity() {
     var questionNum: Int = 0
     var points: Int = 0
     val questions = arrayListOf(
-        "q1",
-        "q2",
-        "q3",
-        "q4",
-        "q5",
-        "q6",
-        "q7"
+        "If you found a $100 bill on the floor, would you keep it for yourself?",
+        "Do you say sorry to people for no reason?",
+        "Do you watch anime?",
+        "Do you watch Kdrama?",
+        "Would you say money is an indicator of success?",
+        "Do you like dogs?",
+        "Do you like BPlate?"
         )
 
     lateinit var leftButton: Button
@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity() {
             2 -> {"A Weeb"}
             3 -> {"Slightly useful to society"}
             4 -> {"Has a chance to succeed in life"}
-            5 -> {"Wait I just realized this is supposed to be personalities"}
+            5 -> {"Koreaboo"}
             6 -> {"Either you are faking it or you are a samaritan"}
             7 -> {"Stop lying you showoff, go home"}
             else-> {"You have been deemed unjudgeable by the Sibyl System"}
