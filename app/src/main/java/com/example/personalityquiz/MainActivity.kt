@@ -109,7 +109,6 @@ class MainActivity : AppCompatActivity() {
             7 -> {"Stop lying you showoff, go home"}
             else-> {"You have been deemed unjudgeable by the Sibyl System"}
         }
-        // In actual workshop can use if statements for simplicity
 
         titleText.text = getString(R.string.resultsTitle)
         questionText.text = personality
