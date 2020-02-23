@@ -2,24 +2,20 @@
 
 ## Resources
 
-<!-- TODO: View-only link to slides -->
-
-- [**Workshop Slides**]()
+- [**Workshop Slides**](https://tinyurl.com/hoth7-android-slides)
 
 **Kotlin**
 
 - [Documentation](https://kotlinlang.org/docs/reference/)
 - [Interactive Tutorial](https://blog.jetbrains.com/blog/2019/12/05/jetbrains-academy-kotlin/)
 
-<!-- TODO: Link to Android Studio Documentation -->
-
 **Android Studio**
 
-- [Documentation]()
-- [Activities]()
-- [Layouts]()
-- [Views]()
-- [Starting Your First Project]()
+- [Documentation](https://developer.android.com/guide)
+- [Activities](https://developer.android.com/guide/components/activities/intro-activities)
+- [Layouts](https://developer.android.com/guide/topics/ui/declaring-layout)
+- [Views](https://developer.android.com/guide/topics/ui/controls/button)
+- [Starting Your First Project](https://developer.android.com/training/basics/firstapp)
 
 ## What we will cover in this workshop:
 
