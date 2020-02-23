@@ -155,7 +155,7 @@ First of all, we have to start with how our app will look. Ultimately, we want t
 
 As you can see, this all starts with the `activity_main` file, which contains the main layout code for our initial activity.
 
-I will demonstrate how to design our app using the design tab. If you have trouble following along, you can always copy and paste the XML code [here](app/src/main/java/com/example/personalityquiz/MainActivity.kt).
+I will demonstrate how to design our app using the design tab. If you have trouble following along, you can always copy and paste the XML code [here]("https://github.com/khxia/Personality-Quiz/blob/master/app/src/main/res/layout/activity_main.xml").
 
 - After copying the XML, you might find references to `@string` resources in the layout XML files. We have to create the string resource yourself.
 
