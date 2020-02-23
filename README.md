@@ -5,7 +5,7 @@
 
 First of all, we have to start with how our app will look. Ultimately, we want to get it to look something like this:
 
-<img src="images/preview">
+<img src="https://github.com/khxia/Personality-Quiz/blob/master/images/Preview.PNG">
 
 As you can see, this all starts with the `activity_main` file, which contains the main layout code for our initial activity. 
 
